@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Index:5</title>
+        <style>
+            iframe{
+               height :85vh;
+               width : 80vw; 
+            }
+        </style>
+    </head>
+    <body> 
+        <center>
+            <div><h1>My first Sub-window</h1></div>
+            <form>
+                Size: <input type = "text" id="width"/> X <input type="text" id="height"/> <input type ="button" value="Do it!"onclick="change()"/><br>
+                URL: <input type = "text" id ="url">
+                <input type="button" value = "GO!"onclick="clicked()">
+            </form>
+            <iframe id="if"  ></iframe></div>
+        </center>
+        <script>
+            function clicked()
+            {
+                var link = document.getElementById("url").value;
+                document.getElementById("if").setAttribute("src", "http://"+link);
+            }
+            function change(){
+                var h = document.getElementById("height").value;
+                var w = document.getElementById("width").value;
+
+                document.getElementById("if").style.height=h;
+                document.getElementById("if").style.width=w;
+                // console.log(document.getElementById("if").getAttribute("height"));
+                // console.log(document.getElementById("if").getAttribute("width"));
+                console.log("happened");
+        
+            }
+       </script>
+    </body>
+</html>

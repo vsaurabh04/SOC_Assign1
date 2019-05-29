@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Index:3</title>
+        <style>
+            iframe{
+               height :85vh;
+               width : 80vw; 
+            }
+        </style>
+    </head>
+    <body> 
+        <center>
+            <div><h1>My first Sub-window</h1></div>
+            <div>
+            <input type="button" value="Google" onclick="google()">
+            <input type="button" value="Wikipedia" onclick="wiki()">
+            <input type="button" value="Bing" onclick="bing()"></div>
+            <iframe id="if"  ></iframe></div>
+        </center>
+        <script>
+            function google()
+            {
+                document.getElementById("if").setAttribute("src", "https://www.google.com/webhp?igu=1");
+            }
+            function wiki()
+            {
+                document.getElementById("if").setAttribute("src", "http://www.wikipedia.com");
+            }
+            function bing()
+            {
+                document.getElementById("if").setAttribute("src", "https://www.bing.com");
+            }
+       </script>
+    </body>
+</html>
