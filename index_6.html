@@ -3,10 +3,16 @@
     <head>
         <title>Index:6</title>
         <style>
+            #frame{
+                overflow-x: auto;
+                overflow-y: hidden;
+                resize: both;
+                height :85vh;
+                width : 80vw;
+            }
             iframe{
-               height :85vh;
-               width : 80vw; 
-               resize : both;
+                height: 100%;
+                width: 100%;
             }
         </style>
     </head>
@@ -14,10 +20,13 @@
         <center>
             <div><h1>My first Sub-window</h1></div>
             <form>
-                URL: <input type = "text" id ="url">
+                URL: <input type = "text" id ="url" placeholder="Without http://">
                 <input type="button" value = "GO!"onclick="clicked()">
             </form>
-            <iframe id="if"  ></iframe></div>
+            <div id ="frame">
+                <iframe id="if"  ></iframe>
+            </div>
+        </div>
         </center>
         <script>
             function clicked()
